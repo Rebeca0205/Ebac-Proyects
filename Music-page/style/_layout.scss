@@ -1,0 +1,367 @@
+html, body, p, a{
+    margin: 0;
+}
+
+body{
+    background-color: black;
+    color: $white;
+    font-family: $fontFamily;
+}
+
+main {
+    margin-top: 0.3rem;
+    display: grid;
+    grid-template-columns: 2fr 5fr 2.8fr;
+    @include phone{
+        grid-template-columns: 1fr 2fr;
+    }
+    width: 100%;
+    height: 80%;
+    gap: 5px;
+
+    .main_container{
+
+        &:first-child{
+            width: 100%;
+            font-size: clamp(0.55rem, 1vw, 0.85rem);
+
+            .main_container__homeANDsearch{
+                background-color: $clear-black;
+                padding: 15px;
+                border-radius: 10px;
+                margin-bottom: 5px;
+
+                div {
+                    font-weight: 600;
+                    @include flexdiv(flex-start);
+
+                    img{
+                        @extend %clamp-icons;
+                    }
+
+                    &:first-child{
+                        margin-bottom: 15px;
+                    }
+                }
+            }
+
+            .main_container__Library{
+                background-color: $clear-black;
+                height: 83%;
+                padding: 15px;
+                border-radius: 10px;
+
+                .main_container__Library--title{
+                    @include flexdiv(space-between);
+                    margin-bottom: 15px;
+
+                    div {
+                        font-weight: 600;
+                        @include flexdiv(flex-start);
+                        img{
+                            @extend %clamp-icons;
+                        }
+                    }
+
+                }
+
+                .main_container__Library--order{
+                    @include flexdiv(space-between);
+                    margin-bottom: 15px;
+
+                    img{
+                        @extend %clamp-icons;
+                    }
+
+                    div {
+                        font-weight: 600;
+                        @include flexdiv(flex-start);
+
+                        img{
+                            @extend %clamp-icons;
+                        }
+                    }
+                }
+
+                .main_container__Library--containerArtists{
+
+                    .main_container__Library--Artist {
+                        @include flexdiv(flex-start);
+                        margin-bottom: 15px;
+
+                        div{
+                            width: clamp(rem-calc(30), 8vw, rem-calc(40));
+                            height: clamp(rem-calc(30), 8vw, rem-calc(40));
+                            border-radius: 50%;
+                            overflow: hidden;
+
+                            img{
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                                
+                            }
+                        }
+
+                        &:last-child{
+                            margin: 0;
+                        }
+                    }
+                }
+                
+            }
+        }
+
+        &:nth-child(2){
+            width: 100%;
+
+            .main_container__Artists{
+                padding: 20px 0 20px 0px;
+                height: 40%;
+                @include banner("../img/abbaGroup.jpeg", 52%);
+                border-radius: 10px;
+
+                .main_container__Artists--nextorback{
+                    @include flexdiv(space-between);
+                    @extend %margin-left;
+                    margin-right: 15px;
+                    margin-bottom: 150px;
+
+                    div {
+                        @include flexdiv(flex-start);
+                    }
+                }
+
+                h1{
+                    margin: 0;
+                    margin-left: 15px;
+                    font-size: clamp(3rem, 13vw, 5rem);
+                }
+
+                p{
+                    @extend %margin-left;
+                    font-size: clamp(0.7rem, 2vw, 1rem);
+                }
+            }
+
+            .main_container__MostHeardSongs{
+                height: 55%;
+                @include phone{
+                    height: 54%;
+                }
+                width: 100%;
+                background-color: $clear-black;
+                border-radius: 10px;
+
+                .main_container__MostHeardSongs--Play{
+                    @include flexdiv(flex-start);
+                    padding-top: 15px;
+                    gap: 20px;
+                    @extend %margin-left;
+                }
+
+                h2{
+                    @extend %margin-left;
+                    font-size: clamp(1.25rem, 2vw, 1.75rem);
+                }
+
+                .main_container__MostHeardSongs--Top5songs{
+                    display: grid;
+                    grid-template-columns: repeat(5, 1fr);
+                    justify-items: center;
+                    align-items: center;
+                    gap: 10px;
+
+                    @extend %fontSize-0-8rem;
+
+                    p{
+                        text-align: center;
+                    }
+
+                    img{
+                        width: 30%;
+                    }
+                }
+
+                #see-more{
+                    margin: 10px 0 0 62px;
+                    padding-bottom: 17px;
+                    @extend %fontSize-0-8rem;
+                }
+            }
+        }
+
+        &:last-child{
+            width: 100%;
+            background-color: $clear-black;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            @include phone{
+                grid-column: 1 / span 2;
+                flex-direction: row;
+            }
+
+            .main_container__GroupAndOut {
+                @include flexdiv(space-between);
+                text-align: left;
+                margin: 15px;
+            }
+
+            .main_container__InfoSong{
+                text-align: center;
+            }
+
+            .PlayingSong{
+                width: 80%;
+                text-align: center;
+            }
+
+            .main_container__SongTitle{
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                text-align: left;
+                @include phone{
+                    margin-top: 10px;
+                }
+
+                h3{
+                    font-size: clamp(0.8rem, 2vw, 1.37rem);
+                    margin-bottom: 5px;
+                    margin-top: 5px;
+                }
+
+                p{
+                    font-size: clamp(0.6rem, 2vw, 1rem);
+                }
+
+                img{
+                    @extend %clamp-icons;
+                }
+            }
+
+            .main_container__InfoArtists{
+                margin: 10px;
+                padding: 10px;
+                background-color: $gray;
+                border-radius: 10px;
+
+                .main_container__InfoArtists--banner{
+                    padding: 12px 0 149px 0;
+                    @include phone{
+                        padding: 12px 0 100px 0;
+                    }
+
+                    @include banner("../img/abbaGrouptwo.jpg", 9%);
+                    border-radius: 10px;
+
+                    p{
+                        @extend %margin-left;
+                        font-size: clamp(0.6rem, 2vw, 1rem);
+                        font-weight: 600;
+                    }
+                }
+
+                .main_container__InfoArtists--Info{
+                    margin-top: 10px;
+
+                    p{
+                        &:first-child{
+                            font-weight: 600;
+                            font-size: clamp(0.5rem, 2vw, 1rem);
+                        }
+
+                        &:last-child{
+                            @extend %fontSize-0-8rem;
+                        }
+                    }
+
+                    div{
+                        @include flexdiv(space-between);
+                        margin-bottom: 10px;
+
+                        p{
+                            @extend %fontSize-0-8rem;
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+}
+
+
+footer{
+    @include flexdiv(space-between);
+    @include phone{
+        @include flexdiv(center);
+        gap: 30px;
+    }
+    padding: 10px 20px;
+
+    .footer_container{
+
+        &:first-child{
+            @include flexdiv(flex-end);
+            width: 10%;
+
+            div{
+                &:first-child{
+                    width: 37%;
+                    .footer_container--PlayingSong{
+                        width: 100%;
+                    }
+                }
+
+                &:nth-child(2){
+                    h3{
+                        margin: 5px 0;
+                        font-size: clamp(0.6rem, 2vw, 0.9rem);
+                    }
+
+                    p{
+                        font-size: clamp(0.4rem, 1vw, 0.6rem);
+                    }
+                }
+            }
+
+            img{
+                @extend %clamp-icons;
+            }
+        }
+
+        &:nth-child(2){
+            display: flex;
+            flex-direction: column;
+            width: 40%;
+
+            article{
+                &:first-child{
+                    @include flexdiv(center);
+                    
+                    img{
+                        @extend %clamp-icons;
+                    }
+                }
+
+                &:last-child{
+                    @include flexdiv(flex-start);
+                    p{
+                        font-size: clamp(0.7rem, 2vw, 1rem);
+                    }
+                }
+            }
+
+            
+        }
+
+        &:last-child{
+            img{
+                @extend %clamp-icons;
+            }
+        }
+    }
+    
+}

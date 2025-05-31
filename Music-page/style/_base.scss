@@ -1,0 +1,66 @@
+$clear-black: #1c1c1c; /*Esto es una variable de Sass*/
+$green-brand: #1db954;
+$white: #fff;
+$gray: #2b2b2b;
+$fontFamily: "Work Sans", sans-serif;
+
+%button{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: all .2s ease;
+    cursor: pointer;
+}
+
+%text-button{
+    display: block;
+    border: 1px solid $white;
+    border-radius: 20px;
+    clip-path: inset(0 round 20px);
+    text-align: center;
+    padding: 10px 10px;
+    color: $white;
+    background-color: $clear-black;
+    font-family: $fontFamily;
+    font-weight: 600;
+    font-size: clamp(0.7rem, 2vw, 1rem);
+    cursor: pointer;
+}
+
+%clamp-icons{
+    width: clamp(1rem, 2vw, 1.5rem);
+}
+
+%margin-left{
+    margin-left: 15px;
+}
+
+%fontSize-0-8rem{
+    font-size: clamp(0.6rem, 1vw, 0.8rem);
+}
+
+@function rem-calc($px) {
+    @return $px / 16 * 1rem;
+  }
+
+@mixin flexdiv($justify){
+    display: flex;
+    justify-content: $justify;
+    align-items: center;
+    gap: 10px;
+}
+
+@mixin banner($image, $positionY){
+    width: 100%;
+    background-image: url($image);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(120, 120, 120, 0.5);
+    background-blend-mode: multiply;
+    background-position-y: $positionY;
+}
+
+@mixin phone{
+    @media screen and (max-width: 70rem){ @content }
+}

@@ -1,0 +1,416 @@
+/*Esto es una variable de Sass*/
+.footer_container--containerbutton, .main_container__MostHeardSongs--containerbutton, .main_container__Artists--containerbutton {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.main_container__InfoArtists--button, .main_container__MostHeardSongs--button {
+  display: block;
+  border: 1px solid #fff;
+  border-radius: 20px;
+  -webkit-clip-path: inset(0 round 20px);
+          clip-path: inset(0 round 20px);
+  text-align: center;
+  padding: 10px 10px;
+  color: #fff;
+  background-color: #1c1c1c;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 600;
+  font-size: clamp(0.7rem, 2vw, 1rem);
+  cursor: pointer;
+}
+
+footer .footer_container:last-child img, footer .footer_container:nth-child(2) article:first-child img, footer .footer_container:first-child img, main .main_container:last-child .main_container__SongTitle img, main .main_container:first-child .main_container__Library .main_container__Library--order div img, main .main_container:first-child .main_container__Library .main_container__Library--order img, main .main_container:first-child .main_container__Library .main_container__Library--title div img, main .main_container:first-child .main_container__homeANDsearch div img {
+  width: clamp(1rem, 2vw, 1.5rem);
+}
+
+main .main_container:last-child .main_container__InfoArtists .main_container__InfoArtists--banner p, main .main_container:nth-child(2) .main_container__MostHeardSongs h2, main .main_container:nth-child(2) .main_container__MostHeardSongs .main_container__MostHeardSongs--Play, main .main_container:nth-child(2) .main_container__Artists p, main .main_container:nth-child(2) .main_container__Artists .main_container__Artists--nextorback {
+  margin-left: 15px;
+}
+
+main .main_container:last-child .main_container__InfoArtists .main_container__InfoArtists--Info div p, main .main_container:last-child .main_container__InfoArtists .main_container__InfoArtists--Info p:last-child, main .main_container:nth-child(2) .main_container__MostHeardSongs #see-more, main .main_container:nth-child(2) .main_container__MostHeardSongs .main_container__MostHeardSongs--Top5songs, .main_container__InfoArtists--button {
+  font-size: clamp(0.6rem, 1vw, 0.8rem);
+}
+
+.main_container__MostHeardSongs--button:hover {
+  background-color: rgb(51, 51, 51);
+}
+
+.main_container__InfoArtists--button:hover {
+  background-color: rgb(51, 51, 51);
+}
+
+.main_container__Artists--containerbutton {
+  width: 1.8rem;
+  height: 1.8rem;
+  background-color: rgba(51, 51, 51, 0.5);
+}
+.main_container__Artists--containerbutton:hover {
+  transform: scale(1.08);
+  background-color: rgb(51, 51, 51);
+}
+.main_container__Artists--containerbutton img {
+  width: 60%;
+  height: auto;
+}
+
+.main_container__MostHeardSongs--containerbutton {
+  width: clamp(2rem, 5vw, 3rem);
+  height: clamp(2rem, 5vw, 3rem);
+  background-color: #1db954;
+}
+.main_container__MostHeardSongs--containerbutton img {
+  width: clamp(1.25rem, 3vw, 1.875rem);
+}
+.main_container__MostHeardSongs--containerbutton:hover {
+  transform: scale(1.08);
+}
+
+.footer_container--containerbutton {
+  width: clamp(1.5rem, 3vw, 2rem);
+  height: clamp(1.5rem, 3vw, 2rem);
+  background-color: #fff;
+}
+.footer_container--containerbutton img {
+  width: clamp(1rem, 2vw, 1.5rem);
+}
+.footer_container--containerbutton:hover {
+  transform: scale(1.08);
+}
+
+.progress-container {
+  width: 100%;
+  height: 2px;
+  background-color: #2b2b2b;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  width: 40%; /* Progreso actual */
+  background-color: #fff;
+}
+
+html, body, p, a {
+  margin: 0;
+}
+
+body {
+  background-color: black;
+  color: #fff;
+  font-family: "Work Sans", sans-serif;
+}
+
+main {
+  margin-top: 0.3rem;
+  display: grid;
+  grid-template-columns: 2fr 5fr 2.8fr;
+  width: 100%;
+  height: 80%;
+  gap: 5px;
+}
+@media screen and (max-width: 70rem) {
+  main {
+    grid-template-columns: 1fr 2fr;
+  }
+}
+main .main_container:first-child {
+  width: 100%;
+  font-size: clamp(0.55rem, 1vw, 0.85rem);
+}
+main .main_container:first-child .main_container__homeANDsearch {
+  background-color: #1c1c1c;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 5px;
+}
+main .main_container:first-child .main_container__homeANDsearch div {
+  font-weight: 600;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+}
+main .main_container:first-child .main_container__homeANDsearch div:first-child {
+  margin-bottom: 15px;
+}
+main .main_container:first-child .main_container__Library {
+  background-color: #1c1c1c;
+  height: 83%;
+  padding: 15px;
+  border-radius: 10px;
+}
+main .main_container:first-child .main_container__Library .main_container__Library--title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+main .main_container:first-child .main_container__Library .main_container__Library--title div {
+  font-weight: 600;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+}
+main .main_container:first-child .main_container__Library .main_container__Library--order {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+main .main_container:first-child .main_container__Library .main_container__Library--order div {
+  font-weight: 600;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+}
+main .main_container:first-child .main_container__Library .main_container__Library--containerArtists .main_container__Library--Artist {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+main .main_container:first-child .main_container__Library .main_container__Library--containerArtists .main_container__Library--Artist div {
+  width: clamp(1.875rem, 8vw, 2.5rem);
+  height: clamp(1.875rem, 8vw, 2.5rem);
+  border-radius: 50%;
+  overflow: hidden;
+}
+main .main_container:first-child .main_container__Library .main_container__Library--containerArtists .main_container__Library--Artist div img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .main_container:first-child .main_container__Library .main_container__Library--containerArtists .main_container__Library--Artist:last-child {
+  margin: 0;
+}
+main .main_container:nth-child(2) {
+  width: 100%;
+}
+main .main_container:nth-child(2) .main_container__Artists {
+  padding: 20px 0 20px 0px;
+  height: 40%;
+  width: 100%;
+  background-image: url("../img/abbaGroup.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: rgba(120, 120, 120, 0.5);
+  background-blend-mode: multiply;
+  background-position-y: 52%;
+  border-radius: 10px;
+}
+main .main_container:nth-child(2) .main_container__Artists .main_container__Artists--nextorback {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-right: 15px;
+  margin-bottom: 150px;
+}
+main .main_container:nth-child(2) .main_container__Artists .main_container__Artists--nextorback div {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+}
+main .main_container:nth-child(2) .main_container__Artists h1 {
+  margin: 0;
+  margin-left: 15px;
+  font-size: clamp(3rem, 13vw, 5rem);
+}
+main .main_container:nth-child(2) .main_container__Artists p {
+  font-size: clamp(0.7rem, 2vw, 1rem);
+}
+main .main_container:nth-child(2) .main_container__MostHeardSongs {
+  height: 55%;
+  width: 100%;
+  background-color: #1c1c1c;
+  border-radius: 10px;
+}
+@media screen and (max-width: 70rem) {
+  main .main_container:nth-child(2) .main_container__MostHeardSongs {
+    height: 54%;
+  }
+}
+main .main_container:nth-child(2) .main_container__MostHeardSongs .main_container__MostHeardSongs--Play {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  padding-top: 15px;
+  gap: 20px;
+}
+main .main_container:nth-child(2) .main_container__MostHeardSongs h2 {
+  font-size: clamp(1.25rem, 2vw, 1.75rem);
+}
+main .main_container:nth-child(2) .main_container__MostHeardSongs .main_container__MostHeardSongs--Top5songs {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  justify-items: center;
+  align-items: center;
+  gap: 10px;
+}
+main .main_container:nth-child(2) .main_container__MostHeardSongs .main_container__MostHeardSongs--Top5songs p {
+  text-align: center;
+}
+main .main_container:nth-child(2) .main_container__MostHeardSongs .main_container__MostHeardSongs--Top5songs img {
+  width: 30%;
+}
+main .main_container:nth-child(2) .main_container__MostHeardSongs #see-more {
+  margin: 10px 0 0 62px;
+  padding-bottom: 17px;
+}
+main .main_container:last-child {
+  width: 100%;
+  background-color: #1c1c1c;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (max-width: 70rem) {
+  main .main_container:last-child {
+    grid-column: 1/span 2;
+    flex-direction: row;
+  }
+}
+main .main_container:last-child .main_container__GroupAndOut {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  text-align: left;
+  margin: 15px;
+}
+main .main_container:last-child .main_container__InfoSong {
+  text-align: center;
+}
+main .main_container:last-child .PlayingSong {
+  width: 80%;
+  text-align: center;
+}
+main .main_container:last-child .main_container__SongTitle {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: left;
+}
+@media screen and (max-width: 70rem) {
+  main .main_container:last-child .main_container__SongTitle {
+    margin-top: 10px;
+  }
+}
+main .main_container:last-child .main_container__SongTitle h3 {
+  font-size: clamp(0.8rem, 2vw, 1.37rem);
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+main .main_container:last-child .main_container__SongTitle p {
+  font-size: clamp(0.6rem, 2vw, 1rem);
+}
+main .main_container:last-child .main_container__InfoArtists {
+  margin: 10px;
+  padding: 10px;
+  background-color: #2b2b2b;
+  border-radius: 10px;
+}
+main .main_container:last-child .main_container__InfoArtists .main_container__InfoArtists--banner {
+  padding: 12px 0 149px 0;
+  width: 100%;
+  background-image: url("../img/abbaGrouptwo.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: rgba(120, 120, 120, 0.5);
+  background-blend-mode: multiply;
+  background-position-y: 9%;
+  border-radius: 10px;
+}
+@media screen and (max-width: 70rem) {
+  main .main_container:last-child .main_container__InfoArtists .main_container__InfoArtists--banner {
+    padding: 12px 0 100px 0;
+  }
+}
+main .main_container:last-child .main_container__InfoArtists .main_container__InfoArtists--banner p {
+  font-size: clamp(0.6rem, 2vw, 1rem);
+  font-weight: 600;
+}
+main .main_container:last-child .main_container__InfoArtists .main_container__InfoArtists--Info {
+  margin-top: 10px;
+}
+main .main_container:last-child .main_container__InfoArtists .main_container__InfoArtists--Info p:first-child {
+  font-weight: 600;
+  font-size: clamp(0.5rem, 2vw, 1rem);
+}
+main .main_container:last-child .main_container__InfoArtists .main_container__InfoArtists--Info div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 20px;
+}
+@media screen and (max-width: 70rem) {
+  footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    gap: 30px;
+  }
+}
+footer .footer_container:first-child {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+  width: 10%;
+}
+footer .footer_container:first-child div:first-child {
+  width: 37%;
+}
+footer .footer_container:first-child div:first-child .footer_container--PlayingSong {
+  width: 100%;
+}
+footer .footer_container:first-child div:nth-child(2) h3 {
+  margin: 5px 0;
+  font-size: clamp(0.6rem, 2vw, 0.9rem);
+}
+footer .footer_container:first-child div:nth-child(2) p {
+  font-size: clamp(0.4rem, 1vw, 0.6rem);
+}
+footer .footer_container:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+footer .footer_container:nth-child(2) article:first-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+footer .footer_container:nth-child(2) article:last-child {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+}
+footer .footer_container:nth-child(2) article:last-child p {
+  font-size: clamp(0.7rem, 2vw, 1rem);
+}/*# sourceMappingURL=main.css.map */
