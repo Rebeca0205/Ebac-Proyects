@@ -1,0 +1,166 @@
+body{
+    width:100%;
+    font-size: 1rem;
+    color: $soft-black;
+    font-family: $fontPlayfair;
+    margin: 0; 
+    background-color: $white;
+
+    @include darkScheme{
+        background-color: $soft-black;
+        transition: all .25s linear;
+        color: $white;
+    }
+
+    h1{
+        font-size: clamp(rem-calc(24), 3vw, rem-calc(40));
+    }
+    
+    h2{
+        font-size: clamp(rem-calc(12.8), 1.6vw, rem-calc(24));
+    }
+    
+    h3{
+        @extend %fontSize1-17rem;
+        text-align: center;
+    }
+    
+    p, li, a{
+        font-size: clamp(rem-calc(9.6), 1.28vw, rem-calc(16));
+    }
+}
+
+header{
+    width:100%;
+    padding: 20px 50px;
+    background-color: $darker_red;
+    color: $white;
+    text-align: center;
+    box-sizing: border-box;
+
+    img {
+        margin: auto;
+        width: 10%;
+
+        @include phone{
+            width: 30%;
+        }
+    }
+}
+
+.main__form--banner{ //Este es el fondo de periodicos detras del form
+    width: 100%;
+    padding: 85px 0;
+    background-image: url("../img/fondo-periodico-viejo_705652-166.avif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(120, 120, 120, 0.5);
+    background-blend-mode: multiply;
+    margin-bottom: 2rem;
+    @include darkScheme{
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+    @include phone{
+        padding: 40px 0;
+    }
+}
+
+.main__moreInfo {
+    @extend %grid;
+    
+    svg {
+        width: rem-calc(128);
+        height: rem-calc(128);
+        @extend %marginBottom1rem;
+
+        @include darkScheme{
+            fill: $white;
+        }
+
+        @include halfScreen{
+            width: 5rem;
+            height: 5rem;
+        }
+    }
+
+    li{
+        @extend %marginBottom1rem;
+    }
+}
+
+.main__comments {
+    @extend %grid;
+
+    .main__comments--container {
+        text-align: center;
+        border: 1px solid $clear_gray;
+
+        p{
+            &:nth-child(2){
+                font-family: $fontBarlow;
+                font-size: clamp(rem-calc(12.8), 1.6vw, 1.2rem);
+            }
+
+            &:nth-child(3){
+                padding: 0px 35px;
+            }
+        }
+
+    }
+    
+    img {
+        width: 5rem;
+        margin-top: rem-calc(24);
+        @include halfScreen{
+            width: 3rem;
+        }
+        @include phone{
+            width: 3rem;
+        }
+    }
+    
+}
+
+footer{
+    background-color: $darker_red;
+    color: $white;
+    width:100%;
+    @include flexbox(20px, 50px, space-between, row);
+
+    @include phone{
+        padding: 20px 20px;
+    }
+
+    .footer__logo {
+        width: 12rem;
+        @include halfScreen{
+            width: 5rem;
+        }
+        @include phone{
+            width: 5rem;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .footer__socialMedia{
+        width: 7rem;
+        display: flex;
+        justify-content: space-between;
+
+        @include halfScreen{
+            width: 5rem;
+        }
+        @include phone{
+            width: 5rem;
+        }
+
+        img{
+            width: 100%;
+        }
+    }
+
+}
+

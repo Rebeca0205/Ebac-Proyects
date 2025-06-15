@@ -1,0 +1,79 @@
+.button{ //Este es el boton de "Enviar" dentro del form
+    width: 5.5rem;
+    border: 1px solid $white;
+    background-color: $black;
+    color: $white;
+    font-family: $fontPlayfair;
+    transition: all .25s linear;
+    font-size: clamp(0.6rem, 1.14vw, 0.83rem);
+    margin-bottom: 0;
+    @include halfScreen{
+        width: 40%;
+    }
+    @include phone{
+        width: 30%;
+    }
+    
+    &:active{
+        background-color: $pink;
+        color:$black;
+    }
+
+    &:hover{
+        @include withHover{
+            background-color: $red;
+        }
+    }
+}
+
+.main__form{ //Esta es la sección del form
+    width: 20%;
+    margin: 0 auto;
+    @include flexbox(20px, 10px, center, column);
+    border: 1px solid $clear_gray;
+    background-color: $white;
+    
+
+    @include darkScheme{
+        background-color: $soft-black;
+        transition: all .25s linear;
+        color: $white;
+    }
+    @include halfScreen{
+        width: 30%;
+    }
+    @include phone{
+        width: 50%;
+        padding: 20px 10px;
+    }
+    
+    label{
+
+        &:nth-child(2){
+            font-family: $fontBarlow;
+        }
+
+        &:nth-child(4){
+            font-family: $fontBarlow;
+        }
+        
+        box-sizing: border-box;
+        margin-bottom: rem-calc(24);
+        font-size: clamp(rem-calc(9.6), 1.28vw, rem-calc(16));
+
+        &:first-child{
+            @extend %fontSize1-17rem;
+        }
+    }
+
+    input{
+        @extend %marginBottom1rem;
+        @include halfScreen{
+            width: 60%;
+        }
+        @include phone{
+            width: 60%;
+        }
+        
+    }
+}

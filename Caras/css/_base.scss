@@ -1,0 +1,73 @@
+$soft-black: #1b1a1a;
+$black: #100f0f;
+$darker_red: #dc2121;
+$red: #ff2424;
+$clear_gray: #c5c4c4;
+$pink: #ffaaaa;
+$white: #ffffff;
+$fontPlayfair: 'Playfair-display-Regular', serif;
+$fontBarlow: 'Barlow-light', serif;
+
+@font-face {
+    font-family: 'Playfair-display-Regular';
+    src: url('../fonts/Playfair-display-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Barlow-light';
+    src: url('../fonts/Barlow-light.ttf');
+}
+
+@font-face {
+    font-family: 'Barlow-bold';
+    src: url('../fonts/Barlow-bold.ttf');
+}
+
+@function rem-calc($px) {
+    @return $px / 16 * 1rem;
+  }
+
+%grid{
+    width:100%;
+    padding: 0 35px 10px;
+    text-align: center;
+    display: grid;
+    box-sizing: border-box;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 1.5rem;
+}
+
+%marginBottom1rem{
+    margin-bottom: rem-calc(24);
+}
+
+%fontSize1-17rem{
+    font-size: clamp(rem-calc(12.8), 1.6vw, rem-calc(18.72));
+}
+
+@mixin flexbox ($px1, $px2, $justify, $direction){
+    padding: $px1 $px2;
+    box-sizing: border-box;
+    text-align: center;
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: center;
+}
+
+@mixin darkScheme{
+    @media (prefers-color-scheme: dark){ @content }
+}
+
+@mixin phone{
+    @media screen and (max-width: 390px) {@content}
+}
+
+@mixin halfScreen{
+    @media screen and (max-width: 50em) {@content}
+}
+
+@mixin withHover{
+    @media (hover: hover) {@content}
+}
