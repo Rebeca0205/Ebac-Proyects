@@ -1,4 +1,4 @@
-.button{ //Este es el boton de "Enviar" dentro del form
+button{ //Este es el boton de "Enviar" dentro del form
     width: 5.5rem;
     border: 1px solid $white;
     background-color: $black;
@@ -67,6 +67,8 @@
     }
 
     input{
+        font-family: $fontBarlow;
+        font-size: clamp(rem-calc(12.8), 1.6vw, 1rem);
         @extend %marginBottom1rem;
         @include halfScreen{
             width: 60%;
@@ -75,5 +77,29 @@
             width: 60%;
         }
         
+    }
+}
+
+.main__mensaje{
+    width: 20%;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    position: fixed;             /* se separa del flujo normal */
+    top: 80%;                    /* centrado vertical */
+    left: 39%;   
+    display: none;
+
+    &.exito {
+        background-color: #31b951;
+        color: #fcfdfc;
+        border: 1px solid #005f16;
+        font-weight: 600;
+    }
+   
+    &.error {
+        background-color: #ff2b3c;
+        color: #f8f5f5;
+        border: 1px solid #790b03;
     }
 }

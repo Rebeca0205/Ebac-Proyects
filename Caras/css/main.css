@@ -29,7 +29,7 @@ body h3, .main__form label:first-child {
   font-size: clamp(0.8rem, 1.6vw, 1.17rem);
 }
 
-.button {
+button {
   width: 5.5rem;
   border: 1px solid #ffffff;
   background-color: #100f0f;
@@ -40,21 +40,21 @@ body h3, .main__form label:first-child {
   margin-bottom: 0;
 }
 @media screen and (max-width: 50em) {
-  .button {
+  button {
     width: 40%;
   }
 }
 @media screen and (max-width: 390px) {
-  .button {
+  button {
     width: 30%;
   }
 }
-.button:active {
+button:active {
   background-color: #ffaaaa;
   color: #100f0f;
 }
 @media (hover: hover) {
-  .button:hover {
+  button:hover {
     background-color: #ff2424;
   }
 }
@@ -101,6 +101,10 @@ body h3, .main__form label:first-child {
 .main__form label:nth-child(4) {
   font-family: "Barlow-light", serif;
 }
+.main__form input {
+  font-family: "Barlow-light", serif;
+  font-size: clamp(0.8rem, 1.6vw, 1rem);
+}
 @media screen and (max-width: 50em) {
   .main__form input {
     width: 60%;
@@ -110,6 +114,28 @@ body h3, .main__form label:first-child {
   .main__form input {
     width: 60%;
   }
+}
+
+.main__mensaje {
+  width: 20%;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+  position: fixed; /* se separa del flujo normal */
+  top: 80%; /* centrado vertical */
+  left: 39%;
+  display: none;
+}
+.main__mensaje.exito {
+  background-color: #31b951;
+  color: #fcfdfc;
+  border: 1px solid #005f16;
+  font-weight: 600;
+}
+.main__mensaje.error {
+  background-color: #ff2b3c;
+  color: #f8f5f5;
+  border: 1px solid #790b03;
 }
 
 body {

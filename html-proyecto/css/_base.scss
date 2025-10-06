@@ -1,0 +1,42 @@
+$colorWhite: #fff;
+$darkColor: #6a6a6a;
+$colorBlack: #1b1a1a;
+
+@mixin flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+@mixin fontStyle($FSize, $FWeight){
+    font-size: $FSize;
+    font-weight: $FWeight;
+}
+
+@mixin box-padding($padding) {
+    padding: $padding;
+    box-sizing: border-box;
+}
+
+%center-text {
+    text-align: center;
+}
+
+%clickable {
+    cursor: pointer;
+}
+  
+%full-width {
+    width: 100%;
+}
+
+%button {
+    padding: 15px 0;
+    text-align: center;
+    font-weight: 600;
+    border: none;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+}

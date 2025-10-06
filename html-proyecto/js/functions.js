@@ -157,6 +157,10 @@ const cartIcon = header.lastElementChild;
 const cart = document.querySelector(".cart")
 const cartX = document.querySelector(".cart_xicon")
 
+const menuIcon = header.firstElementChild;
+const menu = document.querySelector(".menu");
+const menuX = document.querySelector(".menu_xicon")
+
 //Icono para ver el carrito
 cartIcon.addEventListener("click", () => {
     cart.classList.add("show");
@@ -165,6 +169,16 @@ cartIcon.addEventListener("click", () => {
 //X para salir del carrito
 cartX.addEventListener("click", () => {
     cart.classList.remove("show");
+});
+
+//Icono para ver el menu
+menuIcon.addEventListener("click", () => {
+    menu.classList.add("show2");
+});
+
+//X para salir del menu
+menuX.addEventListener("click", () => {
+    menu.classList.remove("show2");
 });
 
 product.forEach(m => {
